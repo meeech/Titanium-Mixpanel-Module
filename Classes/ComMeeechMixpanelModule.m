@@ -87,7 +87,7 @@
 }
 
 //args[0]: str event
-//args[1]: dict of properties to send along with event
+//args[1]: (opt) dict of properties to send along with event
 -(void)track:(id)args
 {
     NSString *event = [TiUtils stringValue:[args objectAtIndex:0]];
