@@ -1,9 +1,8 @@
 /**
- * Your Copyright Here
- *
- * Appcelerator Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc.
- * and licensed under the Apache Public License (version 2)
- */
+ * Mitchell Amihod
+ * 
+ * http://mixpanel.com/site_media/doctyl/uploads/iPhone-spec/Classes/MixpanelAPI/index.html
+ */ 
 #import "ComMeeechMixpanelModule.h"
 #import "TiBase.h"
 #import "TiHost.h"
@@ -86,6 +85,25 @@
     [mixpanel setNameTag:value];
 }
 
+//Register super props
+//args[0]: Properties
+-(void)registerSuperProperties:(id)args
+{
+    NSDictionary *props =  [args objectAtIndex:0];
+
+    NSLog(@"[DEBUG] Setting Super props");
+
+    if (props==nil)
+    {
+        NSLog(@"[ERROR] Mixpanel Super Properties missing");
+    }
+    else 
+    {
+        [mixpanel registerSuperProperties:props];
+    }
+}
+
+//Track an event.
 //args[0]: str event
 //args[1]: (opt) dict of properties to send along with event
 -(void)track:(id)args

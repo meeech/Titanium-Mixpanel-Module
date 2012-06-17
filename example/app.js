@@ -23,6 +23,12 @@ mixpanel.identifyUser('meeech');
 //Name user will show up under in Mixpanel dashboard.
 mixpanel.nameTag('meeech');
 
+mixpanel.registerSuperProperties({
+    superProp1: 'changed prop 1',
+    superProp2: 'property 2'
+});
+
+
 //Track a simple event.
 mixpanel.track('A Tracked Event!');
 
