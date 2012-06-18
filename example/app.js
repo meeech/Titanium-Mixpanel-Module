@@ -24,10 +24,15 @@ mixpanel.identifyUser('meeech');
 mixpanel.nameTag('meeech');
 
 mixpanel.registerSuperProperties({
-    superProp1: 'changed prop 1',
-    superProp2: 'property 2'
+	model: Ti.Platform.model,
+    os: Ti.Platform.osname,
+    name:Ti.Platform.name
 });
 
+mixpanel.registerSuperPropertiesOnce({
+    model: 'Should Fail', //model already set
+    theme: 'math'
+});
 
 //Track a simple event.
 mixpanel.track('A Tracked Event!');
@@ -38,6 +43,6 @@ mixpanel.track('Event Name', {
     mp_note: 'This is a test note to go with event.',
 
     //These properties will be available for segmentation
-    propX: 'value',
-    propY: 'value'
+    propX: 'valueX',
+    propY: 'valueY'
 });

@@ -1,6 +1,6 @@
 /**
  * Mitchell Amihod
- * 
+ * Everything maps to Mixpanel API
  * http://mixpanel.com/site_media/doctyl/uploads/iPhone-spec/Classes/MixpanelAPI/index.html
  */ 
 #import "ComMeeechMixpanelModule.h"
@@ -87,7 +87,7 @@
 
 //Register super props
 //args[0]: Properties
--(void)registerSuperProperties:(id)args
+-(void)registerSuperProperties:(id)args 
 {
     NSDictionary *props =  [args objectAtIndex:0];
 
@@ -95,11 +95,29 @@
 
     if (props==nil)
     {
-        NSLog(@"[ERROR] Mixpanel Super Properties missing");
+        NSLog(@"[ERROR] Mixpanel SuperProperties missing");
     }
     else 
     {
         [mixpanel registerSuperProperties:props];
+    }
+}
+
+//Register super props once
+//args[0]: Properties
+-(void)registerSuperPropertiesOnce:(id)args
+{
+    NSDictionary *props =  [args objectAtIndex:0];
+
+    NSLog(@"[DEBUG] Setting SuperPropertiesOnce");
+
+    if (props==nil)
+    {
+        NSLog(@"[ERROR] Mixpanel Super Properties missing");
+    }
+    else 
+    {
+        [mixpanel registerSuperPropertiesOnce:props];
     }
 }
 
