@@ -4,9 +4,9 @@
 #
 version: 1.0
 apiversion: 2
-description: tbd
+description: Use Mixpanel iOS API in your Titanium projects.
 author: Mitchell Amihod
-license: tbd
+license: MIT Modified. 
 copyright: 2012 Mitchell Amihod
 
 

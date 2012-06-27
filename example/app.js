@@ -16,13 +16,14 @@ mixpanel.init('YOUR-TOKEN-HERE');
 //Only delivers on pause
 //mixpanel.uploadInterval(60);
 
-//Set the user id.
-//Otherwise, Mixpanel makes a uniq id for you from
-//device MAC address. Unless you need it, don't set it
-// mixpanel.identifyUser(UNIQID);
+//Set the User ID.
+//Mixpanel makes a unique id for you from device MAC address. 
+//Unless you need it, don't set it.
+//mixpanel.identifyUser(UNIQID);
 
 //Name user will show up under in Mixpanel dashboard.
-mixpanel.nameTag('meeech');
+//If you don't use this, Mixpanel will assign random Guest #### name
+mixpanel.nameTag('USER-NAME-HERE');
 
 mixpanel.registerSuperProperties({
 	model: Ti.Platform.model,

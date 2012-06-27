@@ -4,7 +4,7 @@
 
 Module to use the Mixpanel API with your Titanium Project. 
 
-Currently only offers basic tracking functionality. See example/app.js for what's been implemented.
+See example/app.js for what's been implemented.
 
 ## Usage
 
@@ -14,7 +14,7 @@ See example/app.js for usage example.
 
 * Interval doesn't seem to be working. Info is only delivered when the app is backgrounded/paused.
 * Can't get flush working, to allow for manual flushing of data to Mixpanel. 
-* Not all the API is exposed at the moment.
+* Most, but not all the API is implemented. See example/app.js.
 
 ## Author
 
