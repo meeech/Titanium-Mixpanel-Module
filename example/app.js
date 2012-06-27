@@ -17,8 +17,9 @@ mixpanel.init('YOUR-TOKEN-HERE');
 //mixpanel.uploadInterval(60);
 
 //Set the user id.
-//Otherwise, Mixpanel makes a uniq id for you from device MAC address.
-mixpanel.identifyUser('meeech');
+//Otherwise, Mixpanel makes a uniq id for you from
+//device MAC address. Unless you need it, don't set it
+// mixpanel.identifyUser(UNIQID);
 
 //Name user will show up under in Mixpanel dashboard.
 mixpanel.nameTag('meeech');
